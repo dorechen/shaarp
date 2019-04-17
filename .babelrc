@@ -1,0 +1,19 @@
+{
+  "presets": [
+    [
+      "@babel/preset-react",
+      {
+        "useBuiltIns": true
+      }
+    ],
+    [
+      "@emotion/babel-preset-css-prop",
+      {
+        "useBuiltIns": true,
+        "autoLabel": true,
+        "sourceMap": false
+      }
+    ],
+
+  ]
+}

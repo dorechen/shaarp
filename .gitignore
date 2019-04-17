@@ -1,3 +1,7 @@
+# pika pack build
+pkg
+
+# Standard Githib gitignore below
 # Logs
 logs
 *.log

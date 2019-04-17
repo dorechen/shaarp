@@ -1,0 +1,33 @@
+{
+  "name": "@woork/ui",
+  "version": "0.0.0",
+  "description": "woork's ui components library",
+  "main": "src/index.js",
+  "license": "MIT",
+  "@pika/pack": {
+    "pipeline": [
+      [ "@pika/plugin-standard-pkg", { "exclude": [ "__tests__/**/*" ] } ],
+      [ "@pika/plugin-build-web" ]
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "@emotion/babel-preset-css-prop": "^10.0.9",
+    "@pika/plugin-build-web": "^0.3.14",
+    "@pika/plugin-standard-pkg": "^0.3.14",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "prettier": "^1.17.0"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.10"
+  },
+  "peerDependencies": {
+    "react": "16.8+",
+    "react-dom": "16.8+"
+  }
+}
