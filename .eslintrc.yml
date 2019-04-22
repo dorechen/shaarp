@@ -21,3 +21,7 @@ parserOptions:
     node: true
 rules:
   prettier/prettier: error
+overrides:
+  - files: [src/*.stories.js]
+    globals:
+      module: readonly
