@@ -1,7 +1,7 @@
 {
-  "name": "@woork/ui",
+  "name": "@woork/shaarp",
   "version": "0.0.0",
-  "description": "woork's ui components library",
+  "description": "Woork's ui components library",
   "main": "src/index.js",
   "license": "MIT",
   "@pika/pack": {
