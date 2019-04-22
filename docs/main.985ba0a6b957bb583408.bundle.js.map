@@ -1,0 +1,1 @@
+{"version":3,"file":"main.985ba0a6b957bb583408.bundle.js","sources":["webpack:///./src/Button.js"],"sourcesContent":["import { jsx, css } from '@emotion/core'\n\nexport const Button = props => {\n  return (\n    <button\n      css={css`\n        color: hotpink;\n      `}\n      {...props}\n    />\n  )\n}\n"],"mappings":"AAEA","sourceRoot":""}
