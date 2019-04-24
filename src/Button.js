@@ -1,12 +1,59 @@
 import { jsx, css } from '@emotion/core'
+import T from 'prop-types'
 
-export const Button = props => {
+const basicButton = css`
+  min-width: 336px;
+  height: 48px;
+  color: #ffffff;
+  background-color: #000000;
+  border: none;
+  transition: linear 300ms;
+  transition-property: color, background-color;
+
+  &:hover {
+    background-color: #00000080;
+  }
+`
+
+const invertedButton = css`
+  background-color: #414141;
+  border: 2px solid #ffffff;
+
+  &:hover,
+  &:focus {
+    background-color: #ffffff;
+    color: #000000;
+  }
+`
+
+const selectorButton = css`
+  background-color: #fafafa;
+  color: #979797;
+
+  &:hover {
+    background-color: #f0f0ee;
+    color: #000000;
+  }
+
+  &:focus {
+    background-color: #6e61cc;
+    color: #fafafa;
+  }
+`
+
+export const Button = ({ inverted, selector, ...props }) => {
   return (
     <button
-      css={css`
-        color: hotpink;
-      `}
+      css={[
+        basicButton,
+        inverted ? invertedButton : selector ? selectorButton : null,
+      ]}
       {...props}
     />
   )
+}
+
+Button.propTypes = {
+  inverted: T.bool,
+  selector: T.bool,
 }

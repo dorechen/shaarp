@@ -6,9 +6,16 @@ import { action } from '@storybook/addon-actions'
 import { Button } from './Button'
 
 storiesOf('Button', module)
-  .add('with text', () => (
-    <Button onClick={action('clicked')}>Hello Button</Button>
+  .add('default', () => (
+    <Button onClick={action('clicked')}>Hello Button 😎 👍 💯</Button>
   ))
-  .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>
+  .add('inverted', () => (
+    <Button inverted onClick={action('clicked')}>
+      Inverted
+    </Button>
+  ))
+  .add('selector', () => (
+    <Button selector onClick={action('clicked')}>
+      Selector Button
+    </Button>
   ))
