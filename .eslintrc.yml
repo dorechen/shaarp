@@ -5,9 +5,9 @@ extends:
   - prettier/babel
   - prettier/react
 plugins:
-  - babel
   - prettier
   - react
+parser: babel-eslint
 settings:
   react:
     pragma: jsx
