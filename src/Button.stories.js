@@ -3,6 +3,7 @@ import { jsx } from '@emotion/core'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
+import { CornerButton } from './CornerButton'
 import { Button } from './Button'
 
 storiesOf('Button', module)
@@ -18,4 +19,17 @@ storiesOf('Button', module)
     <Button selector onClick={action('clicked')}>
       Selector Button
     </Button>
+  ))
+  .add('corner', () => (
+    <CornerButton onClick={action('clicked')}> Corner </CornerButton>
+  ))
+  .add('corner disabled', () => (
+    <CornerButton disabled onClick={action('clicked')}>
+      Corner Disabled
+    </CornerButton>
+  ))
+  .add('corner mobile', () => (
+    <CornerButton mobile onClick={action('clicked')}>
+      M
+    </CornerButton>
   ))
