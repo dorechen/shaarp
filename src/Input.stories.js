@@ -9,6 +9,7 @@ import { TextArea } from './TextArea'
 storiesOf('Input Field', module)
   .add('Title', () => (
     <div>
+      <h1>Desktop Title Input</h1>
       <Input
         title
         onClick={action('title input selected')}
@@ -19,7 +20,7 @@ storiesOf('Input Field', module)
         onClick={action('title input selected')}
         defaultValue="Title Input with a value"
       />
-
+      <h1>Mobile Title Input</h1>
       <Input
         title
         mobile
@@ -36,25 +37,22 @@ storiesOf('Input Field', module)
   ))
   .add('Text', () => (
     <div>
+      <h1>Desktop Text Input</h1>
       <Input
-        text
         onClick={action('text input selected')}
         placeholder="Text Input with placeholder"
       />
       <Input
-        text
         onClick={action('text input selected')}
         defaultValue="Text Input with a value"
       />
-
+      <h1>Mobile Text Input</h1>
       <Input
-        text
         mobile
         onClick={action('Mobile title input selected')}
         placeholder="Mobile Title Input with placeholder"
       />
       <Input
-        text
         mobile
         onClick={action('Mobile title input selected')}
         defaultValue="Mobile Title Input with a value"
@@ -63,6 +61,7 @@ storiesOf('Input Field', module)
   ))
   .add('TextArea', () => (
     <div>
+      <h1>TextArea Input</h1>
       <TextArea
         onClick={action('text area selected')}
         placeholder="Text area with placeholder"

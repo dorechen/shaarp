@@ -2,12 +2,13 @@ import { jsx, css } from '@emotion/core'
 import T from 'prop-types'
 
 const baseInput = css`
-  width: calc(100% - 96px * 2);
+  width: 100%;
+  height: 48px;
   padding: 0px;
   border: none;
-  margin: 16px 96px;
   outline: none;
   background-color: #fafafa;
+  font-size: 24px;
   text-align: center;
 
   &::placeholder {
@@ -26,27 +27,20 @@ const titleInput = css`
   font-size: 48px;
 `
 
-const textInput = css`
-  height: 48px;
-  font-size: 24px;
-`
-
 const mobileInput = css`
-  width: calc(100% - 12px * 2);
-  height: 48px;
-  margin: 15px 12px;
   font-size: 16px;
 `
 
 const mobileTitleInput = css`
+  height: 48px;
   font-weight: bold;
 `
 
-export const Input = ({ title, text, mobile, ...props }) => (
+export const Input = ({ title, mobile, ...props }) => (
   <input
     css={[
       baseInput,
-      title ? titleInput : text ? textInput : null,
+      title ? titleInput : null,
       mobile ? mobileInput : null,
       mobile && title ? mobileTitleInput : null,
     ]}
@@ -56,6 +50,5 @@ export const Input = ({ title, text, mobile, ...props }) => (
 
 Input.propTypes = {
   title: T.bool,
-  text: T.bool,
   mobile: T.bool,
 }

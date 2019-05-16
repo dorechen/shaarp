@@ -7,6 +7,9 @@ const basicButton = css`
   color: #ffffff;
   background-color: #000000;
   border: none;
+  outline: none;
+  font-size: 24px;
+  cursor: pointer;
   transition: linear 300ms;
   transition-property: color, background-color;
 
@@ -41,12 +44,17 @@ const selectorButton = css`
   }
 `
 
-export const Button = ({ inverted, selector, ...props }) => {
+const mobileButton = css`
+  min-width: 100%;
+`
+
+export const Button = ({ inverted, selector, mobile, ...props }) => {
   return (
     <button
       css={[
         basicButton,
         inverted ? invertedButton : selector ? selectorButton : null,
+        mobile ? mobileButton : null,
       ]}
       {...props}
     />
@@ -56,4 +64,5 @@ export const Button = ({ inverted, selector, ...props }) => {
 Button.propTypes = {
   inverted: T.bool,
   selector: T.bool,
+  mobile: T.bool,
 }
