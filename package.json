@@ -1,5 +1,5 @@
 {
-  "name": "@woork/shaarp",
+  "name": "@woorkio/shaarp",
   "version": "0.0.0",
   "description": "Woork's ui components library",
   "main": "src/index.js",

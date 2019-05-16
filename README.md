@@ -3,6 +3,9 @@ Woork's UI Components library, made with React
 
 This is just the beginning, check back later
 
+Try it:
+`yarn add @woorkio/shaarp`
+
 Development
 ==
 
