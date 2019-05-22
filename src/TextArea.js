@@ -1,11 +1,15 @@
 import { jsx, css } from '@emotion/core'
+import { useEffect, useRef } from 'react'
+import T from 'prop-types'
+import autosize from 'autosize'
 
 const baseTextArea = css`
   width: 100%;
   height: 48px;
   padding: 0px;
   box-sizing: border-box;
-  border: solid transparent 6px;
+  padding: 9px;
+  border: 0;
   outline: none;
   background-color: #fafafa;
   font-family: 'Avenir Next';
@@ -23,6 +27,23 @@ const baseTextArea = css`
     }
   }
 `
-export const TextArea = props => (
-  <textarea css={[baseTextArea]} data-enable-grammarly="false" {...props} />
-)
+export const TextArea = ({ value, ...props }) => {
+  const textareaRef = useRef(null)
+  useEffect(() => {
+    autosize(textareaRef.current)
+  }, [value])
+
+  return (
+    <textarea
+      ref={textareaRef}
+      css={[baseTextArea]}
+      data-enable-grammarly="false"
+      value={value}
+      {...props}
+    />
+  )
+}
+
+TextArea.propTypes = {
+  value: T.string,
+}

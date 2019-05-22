@@ -48,7 +48,8 @@
     "react-dom": "^16.8.6"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.10"
+    "@emotion/core": "^10.0.10",
+    "autosize": "^4.0.2"
   },
   "peerDependencies": {
     "react": "^16.8.6",

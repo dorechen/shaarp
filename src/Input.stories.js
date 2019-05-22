@@ -6,6 +6,8 @@ import { action } from '@storybook/addon-actions'
 import { Input } from './Input'
 import { TextArea } from './TextArea'
 
+const example = 'Text area\nput notes here!\n:)'
+
 storiesOf('Input Field', module)
   .add('Title', () => (
     <div>
@@ -70,5 +72,6 @@ storiesOf('Input Field', module)
         onClick={action('text area selected')}
         defaultValue="Text area with a value"
       />
+      <TextArea onClick={action('text area selected')} defaultValue={example} />
     </div>
   ))
