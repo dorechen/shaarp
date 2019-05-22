@@ -18,7 +18,7 @@ jobs:
             - ./node_modules
       - run:
           name: add-pika-pack
-          command: yarn global add @pika/pack
+          command: yarn global add @pika/pack@0.3.7
       - run:
           name: build
-          command: pack build
+          command: $(yarn global bin)/pack build
