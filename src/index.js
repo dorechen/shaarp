@@ -1,2 +1,5 @@
 export { CornerButton } from './CornerButton'
 export { Button } from './Button'
+export { CornerActionArea } from './CornerActionArea'
+export { Input } from './Input'
+export { TextArea } from './TextArea'
