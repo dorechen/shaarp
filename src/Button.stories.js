@@ -46,7 +46,7 @@ storiesOf('Button', module)
     </ThemeProvider>
   ))
   .add('corner', () => (
-    <div>
+    <ThemeProvider theme={theme}>
       <h1>Desktop Corner Button</h1>
       <CornerActionArea>
         <CornerButton disabled onClick={action('clicked disabled')}>
@@ -55,10 +55,10 @@ storiesOf('Button', module)
         <CornerButton onClick={action('clicked 1')}> Corner 1 </CornerButton>
         <CornerButton onClick={action('clicked 2')}> Corner 2 </CornerButton>
       </CornerActionArea>
-    </div>
+    </ThemeProvider>
   ))
   .add('corner mobile', () => (
-    <div>
+    <ThemeProvider theme={theme}>
       <h1>Mobile Corner Button</h1>
       <CornerActionArea>
         <CornerButton mobile disabled onClick={action('clicked')}>
@@ -68,5 +68,5 @@ storiesOf('Button', module)
           1
         </CornerButton>
       </CornerActionArea>
-    </div>
+    </ThemeProvider>
   ))

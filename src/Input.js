@@ -1,18 +1,18 @@
 import { jsx, css } from '@emotion/core'
 import T from 'prop-types'
 
-const baseInput = css`
+const baseInput = theme => css`
   width: 100%;
-  height: 48px;
+  height: ${theme.size.small};
   padding: 0px;
   border: none;
   outline: none;
-  background-color: #fafafa;
-  font-size: 24px;
+  background-color: ${theme.colour.lightgrey};
+  font-size: ${theme.size.header2};
   text-align: center;
 
   &::placeholder {
-    color: #979797;
+    color: ${theme.colour.darkgrey};
   }
 
   &:focus {
@@ -22,28 +22,28 @@ const baseInput = css`
   }
 `
 
-const titleInput = css`
-  height: 72px;
-  font-size: 48px;
+const titleInput = theme => css`
+  height: ${theme.size.big};
+  font-size: ${theme.size.header1};
 `
 
-const mobileInput = css`
-  font-size: 16px;
+const mobileInput = theme => css`
+  font-size: ${theme.size.header4};
 `
 
-const mobileTitleInput = css`
-  height: 48px;
+const mobileTitleInput = theme => css`
+  height: ${theme.size.small};
   font-weight: bold;
 `
 
 export const Input = ({ title, mobile, ...props }) => (
   <input
-    css={[
-      baseInput,
-      title ? titleInput : null,
-      mobile ? mobileInput : null,
-      mobile && title ? mobileTitleInput : null,
-    ]}
+    css={theme => css`
+      ${baseInput(theme)}
+      ${title && titleInput(theme)}
+      ${mobile && mobileInput(theme)}
+      ${mobile && title && mobileTitleInput(theme)}
+    `}
     {...props}
   />
 )

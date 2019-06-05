@@ -1,7 +1,10 @@
 import { jsx } from '@emotion/core'
+import { ThemeProvider } from 'emotion-theming'
 
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+
+import { theme } from './theme'
 
 import { Input } from './Input'
 import { TextArea } from './TextArea'
@@ -10,7 +13,7 @@ const example = 'Text area\nput notes here!\n:)'
 
 storiesOf('Input Field', module)
   .add('Title', () => (
-    <div>
+    <ThemeProvider theme={theme}>
       <h1>Desktop Title Input</h1>
       <Input
         title
@@ -35,10 +38,10 @@ storiesOf('Input Field', module)
         onClick={action('Mobile title input selected')}
         defaultValue="Mobile Title Input with a value"
       />
-    </div>
+    </ThemeProvider>
   ))
   .add('Text', () => (
-    <div>
+    <ThemeProvider theme={theme}>
       <h1>Desktop Text Input</h1>
       <Input
         onClick={action('text input selected')}
@@ -59,10 +62,10 @@ storiesOf('Input Field', module)
         onClick={action('Mobile title input selected')}
         defaultValue="Mobile Title Input with a value"
       />
-    </div>
+    </ThemeProvider>
   ))
   .add('TextArea', () => (
-    <div>
+    <ThemeProvider theme={theme}>
       <h1>TextArea Input</h1>
       <TextArea
         onClick={action('text area selected')}
@@ -73,5 +76,5 @@ storiesOf('Input Field', module)
         defaultValue="Text area with a value"
       />
       <TextArea onClick={action('text area selected')} defaultValue={example} />
-    </div>
+    </ThemeProvider>
   ))

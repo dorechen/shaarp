@@ -53,14 +53,8 @@ export const Button = ({ inverted, selector, mobile, ...props }) => {
     <button
       css={theme => css`
       ${basicButton(theme)}
-      ${
-        inverted
-          ? invertedButton(theme)
-          : selector
-          ? selectorButton(theme)
-          : null
-      }
-      ${mobile ? mobileButton : null}
+      ${inverted ? invertedButton(theme) : selector && selectorButton(theme)}
+      ${mobile && mobileButton}
     `}
       {...props}
     />

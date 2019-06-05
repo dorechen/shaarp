@@ -10,7 +10,9 @@ export const theme = {
   size: {
     big: '72px',
     small: '48px',
+    icon: '48px',
     header1: '48px',
     header2: '24px',
+    header4: '16px',
   },
 }
