@@ -49,7 +49,8 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",
-    "autosize": "^4.0.2"
+    "autosize": "^4.0.2",
+    "emotion-theming": "^10.0.10"
   },
   "peerDependencies": {
     "react": "^16.8.6",

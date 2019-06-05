@@ -1,7 +1,10 @@
 import { jsx } from '@emotion/core'
+import { ThemeProvider } from 'emotion-theming'
 
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+
+import { theme } from './theme'
 
 import { CornerActionArea } from './CornerActionArea'
 import { CornerButton } from './CornerButton'
@@ -9,17 +12,17 @@ import { Button } from './Button'
 
 storiesOf('Button', module)
   .add('default', () => (
-    <div>
+    <ThemeProvider theme={theme}>
       <h1>Desktop Default Button</h1>
       <Button onClick={action('clicked')}> Default </Button>
       <h1>Mobile Default Button</h1>
       <Button mobile onClick={action('clicked')}>
         Default
       </Button>
-    </div>
+    </ThemeProvider>
   ))
   .add('inverted', () => (
-    <div>
+    <ThemeProvider theme={theme}>
       <h1>Desktop Inverted Button</h1>
       <Button inverted onClick={action('clicked')}>
         Inverted
@@ -28,10 +31,10 @@ storiesOf('Button', module)
       <Button inverted mobile onClick={action('clicked')}>
         Inverted
       </Button>
-    </div>
+    </ThemeProvider>
   ))
   .add('selector', () => (
-    <div>
+    <ThemeProvider theme={theme}>
       <h1>Desktop Selector Button</h1>
       <Button selector onClick={action('clicked')}>
         Selector
@@ -40,7 +43,7 @@ storiesOf('Button', module)
       <Button selector mobile onClick={action('clicked')}>
         Selector
       </Button>
-    </div>
+    </ThemeProvider>
   ))
   .add('corner', () => (
     <div>
