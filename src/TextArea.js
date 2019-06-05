@@ -3,22 +3,22 @@ import { useEffect, useRef } from 'react'
 import T from 'prop-types'
 import autosize from 'autosize'
 
-const baseTextArea = theme => css`
+const baseTextArea = css`
   width: 100%;
-  height: ${theme.size.small};
+  height: 48px;
   padding: 0px;
   box-sizing: border-box;
   padding: 9px;
   border: 0;
   outline: none;
-  background-color: ${theme.colour.lightgrey};
+  background-color: #fafafa;
   font-family: 'Avenir Next';
-  font-size: ${theme.size.header2};
+  font-size: 24px;
   text-align: center;
   resize: none;
 
   &::placeholder {
-    color: ${theme.colour.darkgrey};
+    color: #979797;
   }
 
   &:focus {
@@ -36,11 +36,7 @@ export const TextArea = ({ value, ...props }) => {
   return (
     <textarea
       ref={textareaRef}
-      css={theme =>
-        css`
-          ${baseTextArea(theme)}
-        `
-      }
+      css={[baseTextArea]}
       data-enable-grammarly="false"
       value={value}
       {...props}

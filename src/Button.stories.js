@@ -1,10 +1,7 @@
 import { jsx } from '@emotion/core'
-import { ThemeProvider } from 'emotion-theming'
 
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-
-import { theme } from './theme'
 
 import { CornerActionArea } from './CornerActionArea'
 import { CornerButton } from './CornerButton'
@@ -12,17 +9,17 @@ import { Button } from './Button'
 
 storiesOf('Button', module)
   .add('default', () => (
-    <ThemeProvider theme={theme}>
+    <div>
       <h1>Desktop Default Button</h1>
       <Button onClick={action('clicked')}> Default </Button>
       <h1>Mobile Default Button</h1>
       <Button mobile onClick={action('clicked')}>
         Default
       </Button>
-    </ThemeProvider>
+    </div>
   ))
   .add('inverted', () => (
-    <ThemeProvider theme={theme}>
+    <div>
       <h1>Desktop Inverted Button</h1>
       <Button inverted onClick={action('clicked')}>
         Inverted
@@ -31,10 +28,10 @@ storiesOf('Button', module)
       <Button inverted mobile onClick={action('clicked')}>
         Inverted
       </Button>
-    </ThemeProvider>
+    </div>
   ))
   .add('selector', () => (
-    <ThemeProvider theme={theme}>
+    <div>
       <h1>Desktop Selector Button</h1>
       <Button selector onClick={action('clicked')}>
         Selector
@@ -43,10 +40,10 @@ storiesOf('Button', module)
       <Button selector mobile onClick={action('clicked')}>
         Selector
       </Button>
-    </ThemeProvider>
+    </div>
   ))
   .add('corner', () => (
-    <ThemeProvider theme={theme}>
+    <div>
       <h1>Desktop Corner Button</h1>
       <CornerActionArea>
         <CornerButton disabled onClick={action('clicked disabled')}>
@@ -55,10 +52,10 @@ storiesOf('Button', module)
         <CornerButton onClick={action('clicked 1')}> Corner 1 </CornerButton>
         <CornerButton onClick={action('clicked 2')}> Corner 2 </CornerButton>
       </CornerActionArea>
-    </ThemeProvider>
+    </div>
   ))
   .add('corner mobile', () => (
-    <ThemeProvider theme={theme}>
+    <div>
       <h1>Mobile Corner Button</h1>
       <CornerActionArea>
         <CornerButton mobile disabled onClick={action('clicked')}>
@@ -68,5 +65,5 @@ storiesOf('Button', module)
           1
         </CornerButton>
       </CornerActionArea>
-    </ThemeProvider>
+    </div>
   ))

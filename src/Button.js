@@ -1,46 +1,46 @@
 import { jsx, css } from '@emotion/core'
 import T from 'prop-types'
 
-const basicButton = theme => css`
+const basicButton = css`
   min-width: 336px;
-  height: ${theme.size.small};
-  color: ${theme.colour.white};
-  background-color: ${theme.colour.black};
+  height: 48px;
+  color: #ffffff;
+  background-color: #000000;
   border: none;
   outline: none;
-  font-size: ${theme.size.header2};
+  font-size: 24px;
   cursor: pointer;
   transition: linear 300ms;
   transition-property: color, background-color;
 
   &:hover {
-    background-color: ${theme.colour.black_80};
+    background-color: #00000080;
   }
 `
 
-const invertedButton = theme => css`
+const invertedButton = css`
   background-color: #414141;
-  border: 2px solid ${theme.colour.white};
+  border: 2px solid #ffffff;
 
   &:hover,
   &:focus {
-    background-color: ${theme.colour.white};
-    color: ${theme.colour.black};
+    background-color: #ffffff;
+    color: #000000;
   }
 `
 
-const selectorButton = theme => css`
-  background-color: ${theme.colour.lightgrey};
-  color: ${theme.colour.darkgrey};
+const selectorButton = css`
+  background-color: #fafafa;
+  color: #979797;
 
   &:hover {
     background-color: #f0f0ee;
-    color: ${theme.colour.black};
+    color: #000000;
   }
 
   &:focus {
-    background-color: ${theme.colour.purple};
-    color: ${theme.colour.lightgrey};
+    background-color: #6e61cc;
+    color: #fafafa;
   }
 `
 
@@ -51,11 +51,11 @@ const mobileButton = css`
 export const Button = ({ inverted, selector, mobile, ...props }) => {
   return (
     <button
-      css={theme => css`
-      ${basicButton(theme)}
-      ${inverted ? invertedButton(theme) : selector && selectorButton(theme)}
-      ${mobile && mobileButton}
-    `}
+      css={[
+        basicButton,
+        inverted ? invertedButton : selector ? selectorButton : null,
+        mobile ? mobileButton : null,
+      ]}
       {...props}
     />
   )

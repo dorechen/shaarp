@@ -1,13 +1,13 @@
 import { jsx, css } from '@emotion/core'
 import T from 'prop-types'
 
-const baseButton = theme => css`
+const baseButton = css`
   border: none;
-  height: ${theme.size.small};
+  height: 48px;
   min-width: 204px;
-  background: ${theme.colour.black};
-  color: ${theme.colour.white};
-  font-size: ${theme.size.header2};
+  background: #000;
+  color: #fff;
+  font-size: 24px;
   cursor: pointer;
   transition: linear background 300ms;
 
@@ -17,7 +17,7 @@ const baseButton = theme => css`
   }
 
   &:hover {
-    background: ${theme.colour.black_80};
+    background: rgba(0, 0, 0, 0.8);
   }
 
   &:disabled {
@@ -30,18 +30,12 @@ const baseButton = theme => css`
   }
 `
 
-const mobileButton = theme => css`
-  min-width: ${theme.size.icon};
+const mobileButton = css`
+  min-width: 48px;
 `
 
 export const CornerButton = ({ mobile, ...props }) => (
-  <button
-    css={theme => css`
-      ${baseButton(theme)}
-      ${mobile && mobileButton(theme)}
-    `}
-    {...props}
-  />
+  <button css={[baseButton, mobile ? mobileButton : null]} {...props} />
 )
 
 CornerButton.propTypes = {
