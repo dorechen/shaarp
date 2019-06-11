@@ -2,7 +2,8 @@ import { configure, addParameters } from '@storybook/react';
 
 addParameters({
   backgrounds: [
-    { name: 'twitter', value: '#00aced', default: true },
+    { name: 'woork', value: '#ffffff', default: true },
+    { name: 'twitter', value: '#00aced', },
     { name: 'facebook', value: '#3b5998' },
   ],
 });

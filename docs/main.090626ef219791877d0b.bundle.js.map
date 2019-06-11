@@ -1,1 +1,0 @@
-{"version":3,"file":"main.090626ef219791877d0b.bundle.js","sources":["webpack:///./src/CornerActionArea.js"],"sourcesContent":["import { jsx, css } from '@emotion/core'\n\nconst actionArea = css`\n  position: absolute;\n  bottom: 0;\n  right: 0;\n`\n\nexport const CornerActionArea = props => <div css={[actionArea]} {...props} />\n"],"mappings":"AAEA","sourceRoot":""}
