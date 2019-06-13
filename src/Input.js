@@ -22,7 +22,7 @@ const baseInput = css`
   }
 `
 
-const titleInput = css`
+const bigInput = css`
   height: 72px;
   font-size: 48px;
 `
@@ -31,24 +31,24 @@ const mobileInput = css`
   font-size: 16px;
 `
 
-const mobileTitleInput = css`
+const mobileBigInput = css`
   height: 48px;
   font-weight: bold;
 `
 
-export const Input = ({ title, mobile, ...props }) => (
+export const Input = ({ big, mobile, ...props }) => (
   <input
     css={[
       baseInput,
-      title ? titleInput : null,
-      mobile ? mobileInput : null,
-      mobile && title ? mobileTitleInput : null,
+      big && bigInput,
+      mobile && mobileInput,
+      mobile && big && mobileBigInput,
     ]}
     {...props}
   />
 )
 
 Input.propTypes = {
-  title: T.bool,
+  big: T.bool,
   mobile: T.bool,
 }

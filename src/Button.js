@@ -46,6 +46,7 @@ const selectorButton = css`
 
 const mobileButton = css`
   min-width: 100%;
+  font-size: 16px;
 `
 
 export const Button = ({ inverted, selector, mobile, ...props }) => {

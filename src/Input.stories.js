@@ -9,31 +9,31 @@ import { TextArea } from './TextArea'
 const example = 'Text area\nput notes here!\n:)'
 
 storiesOf('Input Field', module)
-  .add('Title', () => (
+  .add('Big Text', () => (
     <div>
-      <h1>Desktop Title Input</h1>
+      <h1>Desktop Big Input</h1>
       <Input
-        title
-        onClick={action('title input selected')}
-        placeholder="Title Input with placeholder"
+        big
+        onClick={action('big input selected')}
+        placeholder="Big Input with placeholder"
       />
       <Input
-        title
-        onClick={action('title input selected')}
-        defaultValue="Title Input with a value"
+        big
+        onClick={action('big input selected')}
+        defaultValue="Big Input with a value"
       />
-      <h1>Mobile Title Input</h1>
+      <h1>Mobile Big Input</h1>
       <Input
-        title
+        big
         mobile
-        onClick={action('Mobile title input selected')}
-        placeholder="Mobile Title Input with placeholder"
+        onClick={action('Mobile big input selected')}
+        placeholder="Mobile Big Input with placeholder"
       />
       <Input
-        title
+        big
         mobile
-        onClick={action('Mobile title input selected')}
-        defaultValue="Mobile Title Input with a value"
+        onClick={action('Mobile big input selected')}
+        defaultValue="Mobile Big Input with a value"
       />
     </div>
   ))
@@ -51,13 +51,13 @@ storiesOf('Input Field', module)
       <h1>Mobile Text Input</h1>
       <Input
         mobile
-        onClick={action('Mobile title input selected')}
-        placeholder="Mobile Title Input with placeholder"
+        onClick={action('Mobile input selected')}
+        placeholder="Mobile Input with placeholder"
       />
       <Input
         mobile
-        onClick={action('Mobile title input selected')}
-        defaultValue="Mobile Title Input with a value"
+        onClick={action('Mobile input selected')}
+        defaultValue="Mobile Input with a value"
       />
     </div>
   ))

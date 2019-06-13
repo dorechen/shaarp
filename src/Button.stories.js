@@ -57,7 +57,7 @@ storiesOf('Button', module)
   .add('corner mobile', () => (
     <div>
       <h1>Mobile Corner Button</h1>
-      <CornerActionArea>
+      <CornerActionArea mobile>
         <CornerButton mobile disabled onClick={action('clicked')}>
           0
         </CornerButton>
