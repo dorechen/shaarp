@@ -10,34 +10,22 @@ import { Button } from './Button'
 storiesOf('Button', module)
   .add('default', () => (
     <div>
-      <h1>Desktop Default Button</h1>
+      <h1>Default Button</h1>
       <Button onClick={action('clicked')}> Default </Button>
-      <h1>Mobile Default Button</h1>
-      <Button mobile onClick={action('clicked')}>
-        Default
-      </Button>
     </div>
   ))
   .add('inverted', () => (
     <div>
-      <h1>Desktop Inverted Button</h1>
+      <h1>Inverted Button</h1>
       <Button inverted onClick={action('clicked')}>
-        Inverted
-      </Button>
-      <h1>Mobile Inverted Button</h1>
-      <Button inverted mobile onClick={action('clicked')}>
         Inverted
       </Button>
     </div>
   ))
   .add('selector', () => (
     <div>
-      <h1>Desktop Selector Button</h1>
+      <h1>Selector Button</h1>
       <Button selector onClick={action('clicked')}>
-        Selector
-      </Button>
-      <h1>Mobile Selector Button</h1>
-      <Button selector mobile onClick={action('clicked')}>
         Selector
       </Button>
     </div>
@@ -57,13 +45,12 @@ storiesOf('Button', module)
   .add('corner mobile', () => (
     <div>
       <h1>Mobile Corner Button</h1>
-      <CornerActionArea mobile>
-        <CornerButton mobile disabled onClick={action('clicked')}>
+      <h2>(view on screen width smaller or equal 600px)</h2>
+      <CornerActionArea>
+        <CornerButton disabled onClick={action('clicked')}>
           0
         </CornerButton>
-        <CornerButton mobile onClick={action('clicked')}>
-          1
-        </CornerButton>
+        <CornerButton onClick={action('clicked')}> 1 </CornerButton>
       </CornerActionArea>
     </div>
   ))

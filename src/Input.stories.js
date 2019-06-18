@@ -11,7 +11,7 @@ const example = 'Text area\nput notes here!\n:)'
 storiesOf('Input Field', module)
   .add('Big Text', () => (
     <div>
-      <h1>Desktop Big Input</h1>
+      <h1>Big Input</h1>
       <Input
         big
         onClick={action('big input selected')}
@@ -22,24 +22,11 @@ storiesOf('Input Field', module)
         onClick={action('big input selected')}
         defaultValue="Big Input with a value"
       />
-      <h1>Mobile Big Input</h1>
-      <Input
-        big
-        mobile
-        onClick={action('Mobile big input selected')}
-        placeholder="Mobile Big Input with placeholder"
-      />
-      <Input
-        big
-        mobile
-        onClick={action('Mobile big input selected')}
-        defaultValue="Mobile Big Input with a value"
-      />
     </div>
   ))
   .add('Text', () => (
     <div>
-      <h1>Desktop Text Input</h1>
+      <h1>Text Input</h1>
       <Input
         onClick={action('text input selected')}
         placeholder="Text Input with placeholder"
@@ -47,17 +34,6 @@ storiesOf('Input Field', module)
       <Input
         onClick={action('text input selected')}
         defaultValue="Text Input with a value"
-      />
-      <h1>Mobile Text Input</h1>
-      <Input
-        mobile
-        onClick={action('Mobile input selected')}
-        placeholder="Mobile Input with placeholder"
-      />
-      <Input
-        mobile
-        onClick={action('Mobile input selected')}
-        defaultValue="Mobile Input with a value"
       />
     </div>
   ))

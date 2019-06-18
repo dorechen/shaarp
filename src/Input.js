@@ -25,30 +25,22 @@ const baseInput = css`
 const bigInput = css`
   height: 72px;
   font-size: 48px;
+  @media screen and (max-width: 600px) {
+    height: 48px;
+    font-weight: bold;
+  }
 `
 
 const mobileInput = css`
-  font-size: 16px;
+  @media screen and (max-width: 600px) {
+    font-size: 16px;
+  }
 `
 
-const mobileBigInput = css`
-  height: 48px;
-  font-weight: bold;
-`
-
-export const Input = ({ big, mobile, ...props }) => (
-  <input
-    css={[
-      baseInput,
-      big && bigInput,
-      mobile && mobileInput,
-      mobile && big && mobileBigInput,
-    ]}
-    {...props}
-  />
+export const Input = ({ big, ...props }) => (
+  <input css={[baseInput, big && bigInput, mobileInput]} {...props} />
 )
 
 Input.propTypes = {
   big: T.bool,
-  mobile: T.bool,
 }

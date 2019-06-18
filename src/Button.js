@@ -45,17 +45,19 @@ const selectorButton = css`
 `
 
 const mobileButton = css`
-  min-width: 100%;
-  font-size: 16px;
+  @media screen and (max-width: 600px) {
+    min-width: 100%;
+    font-size: 16px;
+  }
 `
 
-export const Button = ({ inverted, selector, mobile, ...props }) => {
+export const Button = ({ inverted, selector, ...props }) => {
   return (
     <button
       css={[
         basicButton,
         inverted ? invertedButton : selector ? selectorButton : null,
-        mobile ? mobileButton : null,
+        mobileButton,
       ]}
       {...props}
     />
@@ -65,5 +67,4 @@ export const Button = ({ inverted, selector, mobile, ...props }) => {
 Button.propTypes = {
   inverted: T.bool,
   selector: T.bool,
-  mobile: T.bool,
 }

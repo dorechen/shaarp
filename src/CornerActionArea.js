@@ -6,9 +6,11 @@ const actionArea = css`
 `
 
 const mobileArea = css`
-  display: flex;
-  flex-direction: column;
-  bottom: 48px;
+  @media screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    bottom: 48px;
+  }
 `
 
 const bottomRightArea = css`
@@ -21,18 +23,13 @@ const topRightArea = css`
   right: 0;
 `
 
-export const CornerActionArea = ({ topRight, mobile, ...props }) => (
+export const CornerActionArea = ({ topRight, ...props }) => (
   <div
-    css={[
-      actionArea,
-      topRight ? topRightArea : bottomRightArea,
-      mobile && mobileArea,
-    ]}
+    css={[actionArea, topRight ? topRightArea : bottomRightArea, mobileArea]}
     {...props}
   />
 )
 
 CornerActionArea.propTypes = {
-  mobile: T.bool,
   topRight: T.bool,
 }
