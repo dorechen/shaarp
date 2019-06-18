@@ -15,6 +15,9 @@
         }
       ],
       [
+        "@pika/plugin-build-node", {}
+      ],
+      [
         "@pika/plugin-build-web"
       ]
     ]
@@ -29,6 +32,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
     "@emotion/babel-preset-css-prop": "^10.0.9",
+    "@pika/plugin-build-node": "^0.4.0",
     "@pika/plugin-build-web": "^0.3.14",
     "@pika/plugin-standard-pkg": "^0.3.14",
     "@storybook/addon-actions": "^5.0.10",
