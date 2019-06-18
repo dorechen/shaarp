@@ -1,6 +1,6 @@
 {
   "name": "@woorkio/shaarp",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Woork's ui components library",
   "main": "src/index.js",
   "license": "MIT",
@@ -15,7 +15,8 @@
         }
       ],
       [
-        "@pika/plugin-build-node", {}
+        "@pika/plugin-build-node",
+        {}
       ],
       [
         "@pika/plugin-build-web"
