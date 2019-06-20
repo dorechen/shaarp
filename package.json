@@ -10,7 +10,8 @@
         "@pika/plugin-standard-pkg",
         {
           "exclude": [
-            "**/*.stories.js"
+            "**/*.stories.js",
+            "**/*.md"
           ]
         }
       ],
@@ -39,8 +40,9 @@
     "@storybook/addon-actions": "^5.0.10",
     "@storybook/addon-backgrounds": "^5.0.10",
     "@storybook/addon-links": "^5.0.10",
+    "@storybook/addon-notes": "^5.1.8",
     "@storybook/addons": "^5.0.10",
-    "@storybook/react": "^5.0.10",
+    "@storybook/react": "^5.1.8",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
     "eslint": "^5.16.0",

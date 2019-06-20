@@ -27,23 +27,23 @@ const baseTextArea = css`
     }
   }
 `
-export const TextArea = ({ value, ...props }) => {
+export const TextArea = ({ defaultValue, ...props }) => {
   const textareaRef = useRef(null)
   useEffect(() => {
     autosize(textareaRef.current)
-  }, [value])
+  }, [defaultValue])
 
   return (
     <textarea
       ref={textareaRef}
       css={[baseTextArea]}
       data-enable-grammarly="false"
-      value={value}
+      defaultValue={defaultValue}
       {...props}
     />
   )
 }
 
 TextArea.propTypes = {
-  value: T.string,
+  defaultValue: T.string,
 }
