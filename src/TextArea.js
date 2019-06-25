@@ -12,7 +12,7 @@ const baseTextArea = css`
   border: 0;
   outline: none;
   background-color: #fafafa;
-  font-family: 'Avenir Next';
+  font-family: inherit;
   font-size: 24px;
   text-align: center;
   resize: none;
