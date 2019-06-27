@@ -1,4 +1,5 @@
 import { jsx, css } from '@emotion/core'
+import T from 'prop-types'
 
 const baseButton = css`
   border: none;
@@ -36,6 +37,20 @@ const mobileButton = css`
   }
 `
 
-export const CornerButton = props => (
-  <button css={[baseButton, mobileButton]} {...props} />
+const fullWidthMobile = css`
+  @media screen and (max-width: 600px) {
+    width: 100vw;
+    font-size: 16px;
+  }
+`
+
+export const CornerButton = ({ fullWidth, ...props }) => (
+  <button
+    css={[baseButton, fullWidth ? fullWidthMobile : mobileButton]}
+    {...props}
+  />
 )
+
+CornerButton.propTypes = {
+  fullWidth: T.bool,
+}
