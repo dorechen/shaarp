@@ -27,6 +27,13 @@ const baseTextArea = css`
     }
   }
 `
+
+const mobileTextArea = css`
+  @media screen and (max-width: 600px) {
+    font-size: 16px;
+  }
+`
+
 export const TextArea = ({ defaultValue, ...props }) => {
   const textareaRef = useRef(null)
   useEffect(() => {
@@ -36,7 +43,7 @@ export const TextArea = ({ defaultValue, ...props }) => {
   return (
     <textarea
       ref={textareaRef}
-      css={[baseTextArea]}
+      css={[baseTextArea, mobileTextArea]}
       data-enable-grammarly="false"
       defaultValue={defaultValue}
       {...props}
