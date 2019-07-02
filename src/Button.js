@@ -14,7 +14,7 @@ const basicButton = css`
   transition-property: color, background-color;
 
   &:hover {
-    background-color: #00000080;
+    background-color: #333333;
   }
 `
 

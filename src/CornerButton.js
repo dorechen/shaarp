@@ -17,7 +17,7 @@ const baseButton = css`
   }
 
   &:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background-color: #333333;
   }
 
   &:disabled {
