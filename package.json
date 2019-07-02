@@ -1,6 +1,6 @@
 {
   "name": "@woorkio/shaarp",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Woork's ui components library",
   "main": "src/index.js",
   "license": "MIT",
