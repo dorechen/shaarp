@@ -7,7 +7,7 @@ const baseTextArea = css`
   width: 100%;
   height: 48px;
   box-sizing: border-box;
-  padding: 9px;
+  padding: 8px 0px 6px;
   border: 0;
   outline: none;
   background-color: #fafafa;
@@ -29,6 +29,7 @@ const baseTextArea = css`
 
 const mobileTextArea = css`
   @media screen and (max-width: 600px) {
+    padding: 14px 0px 12px;
     font-size: 16px;
   }
 `
