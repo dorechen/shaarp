@@ -6,7 +6,6 @@ import autosize from 'autosize'
 const baseTextArea = css`
   width: 100%;
   height: 48px;
-  padding: 0px;
   box-sizing: border-box;
   padding: 9px;
   border: 0;
