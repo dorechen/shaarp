@@ -15,7 +15,7 @@ const h1Size = css`
   border-top: solid transparent 12px;
 
   @media screen and (max-width: 600px) {
-    height: 100%;
+    height: 33px;
     font-size: 24px;
   }
 `
@@ -25,6 +25,7 @@ const h2Size = css`
   font-size: 24px;
 
   @media screen and (max-width: 600px) {
+    height: 22px;
     font-size: 16px;
   }
 `
