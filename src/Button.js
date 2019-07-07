@@ -44,6 +44,21 @@ const selectorButton = css`
   }
 `
 
+const selectedButton = css`
+  background-color: #6e61cc;
+  color: #fafafa;
+
+  &:hover,
+  &:focus {
+    background-color: #6e61cc;
+    color: #fafafa;
+  }
+`
+
+const fullWidthButton = css`
+  width: 100%;
+`
+
 const mobileButton = css`
   @media screen and (max-width: 600px) {
     min-width: 100%;
@@ -51,12 +66,25 @@ const mobileButton = css`
   }
 `
 
-export const Button = ({ inverted, selector, ...props }) => {
+export const Button = ({
+  inverted,
+  selector,
+  selected,
+  fullWidth,
+  ...props
+}) => {
   return (
     <button
       css={[
         basicButton,
-        inverted ? invertedButton : selector ? selectorButton : null,
+        inverted
+          ? invertedButton
+          : selector
+          ? selectorButton
+          : selected
+          ? selectedButton
+          : null,
+        fullWidth && fullWidthButton,
         mobileButton,
       ]}
       {...props}
@@ -67,4 +95,6 @@ export const Button = ({ inverted, selector, ...props }) => {
 Button.propTypes = {
   inverted: T.bool,
   selector: T.bool,
+  selected: T.bool,
+  fullWidth: T.bool,
 }

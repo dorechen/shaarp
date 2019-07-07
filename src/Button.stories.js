@@ -25,6 +25,9 @@ storiesOf('Button', module)
         <Button selector onClick={action('clicked')}>
           Selector
         </Button>
+        <Button selected fullWidth onClick={action('clicked')}>
+          Selected Full Width
+        </Button>
       </div>
     ),
     { notes: { markdown: buttonNotes } }

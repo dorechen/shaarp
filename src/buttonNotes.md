@@ -14,6 +14,14 @@ import { Button } from '@woorkio/shaarp'
 <Button inverted> Inverted </Button>
 
 <Button selector> Selector </Button>
+
+<Button selected> Selected Selector </Button>
+```
+
+## Full Width Button Style
+
+```javascript
+<Button fullWidth> Inverted </Button>
 ```
 
 
