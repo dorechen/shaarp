@@ -56,6 +56,7 @@ const selectedButton = css`
 `
 
 const fullWidthButton = css`
+  min-width: 100%;
   width: 100%;
 `
 
