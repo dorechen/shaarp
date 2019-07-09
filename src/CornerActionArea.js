@@ -11,6 +11,7 @@ const mobileArea = css`
     display: flex;
     flex-direction: column;
     bottom: 48px;
+    max-width: inherit;
   }
 `
 
