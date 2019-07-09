@@ -32,14 +32,15 @@ const baseButton = css`
 
 const mobileButton = css`
   @media screen and (max-width: 600px) {
-    min-width: 0px;
-    width: 48px;
+    min-width: 48px;
   }
 `
 
 const fullWidthMobile = css`
   @media screen and (max-width: 600px) {
     width: 100vw;
+    min-width: unset;
+    max-width: 100%;
     font-size: 16px;
   }
 `

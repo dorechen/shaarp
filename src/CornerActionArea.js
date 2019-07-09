@@ -7,6 +7,7 @@ const actionArea = css`
 
 const mobileArea = css`
   @media screen and (max-width: 600px) {
+    position: fixed;
     display: flex;
     flex-direction: column;
     bottom: 48px;
