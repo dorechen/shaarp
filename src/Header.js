@@ -12,7 +12,6 @@ const base = css`
 const h1Size = css`
   height: 72px;
   font-size: 48px;
-  border-top: solid transparent 12px;
 
   @media screen and (max-width: 600px) {
     height: 33px;
