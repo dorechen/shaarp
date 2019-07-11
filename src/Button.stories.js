@@ -9,6 +9,7 @@ import cornerButtonNotes from './cornerButtonNotes.md'
 import { CornerActionArea } from './CornerActionArea'
 import { CornerButton } from './CornerButton'
 import { Button } from './Button'
+import { IconButton } from './IconButton'
 
 storiesOf('Button', module)
   .add(
@@ -28,6 +29,8 @@ storiesOf('Button', module)
         <Button selected fullWidth onClick={action('clicked')}>
           Selected Full Width
         </Button>
+        <h1>Icon Button</h1>
+        <IconButton>I</IconButton>
       </div>
     ),
     { notes: { markdown: buttonNotes } }
