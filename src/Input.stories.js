@@ -36,6 +36,18 @@ storiesOf('Input Field', module)
           onClick={action('text input selected')}
           defaultValue="Text Input with a value"
         />
+        <h1>Dark Input</h1>
+        <Input
+          big
+          dark
+          onClick={action('dark input selected')}
+          defaultValue="Dark Big Text Input"
+        />
+        <Input
+          dark
+          onClick={action('dark input selected')}
+          placeholder="Dark Text Input"
+        />
       </div>
     ),
     { notes: { markdown: inputNotes } }

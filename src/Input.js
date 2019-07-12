@@ -22,6 +22,11 @@ const baseInput = css`
   }
 `
 
+const darkInput = css`
+  background-color: #000000;
+  color: #ffffff;
+`
+
 const bigInput = css`
   height: 72px;
   font-size: 48px;
@@ -37,10 +42,14 @@ const mobileInput = css`
   }
 `
 
-export const Input = ({ big, ...props }) => (
-  <input css={[baseInput, big && bigInput, mobileInput]} {...props} />
+export const Input = ({ big, dark, ...props }) => (
+  <input
+    css={[baseInput, big && bigInput, dark && darkInput, mobileInput]}
+    {...props}
+  />
 )
 
 Input.propTypes = {
   big: T.bool,
+  dark: T.bool,
 }
