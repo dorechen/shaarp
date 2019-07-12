@@ -3,7 +3,7 @@ import T from 'prop-types'
 
 const base = css`
   height: 48px;
-  min-width: 48px;
+  width: 48px;
   border: none;
   outline: none;
   color: #ffffff;
