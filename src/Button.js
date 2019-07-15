@@ -37,11 +37,6 @@ const selectorButton = css`
     background-color: #f0f0ee;
     color: #000000;
   }
-
-  &:focus {
-    background-color: #6e61cc;
-    color: #fafafa;
-  }
 `
 
 const selectedButton = css`
@@ -81,7 +76,9 @@ export const Button = ({
         inverted
           ? invertedButton
           : selector
-          ? selectorButton
+          ? selector && selected
+            ? selectedButton
+            : selectorButton
           : selected
           ? selectedButton
           : null,

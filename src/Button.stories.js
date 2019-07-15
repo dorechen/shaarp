@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { jsx } from '@emotion/core'
 
 import { storiesOf } from '@storybook/react'
@@ -11,6 +12,19 @@ import { CornerButton } from './CornerButton'
 import { Button } from './Button'
 import { IconButton } from './IconButton'
 
+const SelectorButtonStory = () => {
+  const [buttonClicked, toggleButton] = useState(false)
+  return (
+    <Button
+      selector
+      selected={buttonClicked}
+      onClick={() => toggleButton(!buttonClicked)}
+    >
+      Selector
+    </Button>
+  )
+}
+
 storiesOf('Button', module)
   .add(
     'button',
@@ -23,11 +37,9 @@ storiesOf('Button', module)
           Inverted
         </Button>
         <h1>Selector Button</h1>
-        <Button selector onClick={action('clicked')}>
-          Selector
-        </Button>
+        <SelectorButtonStory />
         <Button selected fullWidth onClick={action('clicked')}>
-          Selected Full Width
+          Selected Style Full Width
         </Button>
         <h1>Icon Button</h1>
         <IconButton>I</IconButton>
