@@ -16,12 +16,15 @@ const SingleSelectorStory = () => {
   ]
   const [selectedOption, setSelectedOption] = useState('2')
   return (
-    <SingleSelector
-      options={selectorOptions.map(o => o.key)}
-      selectedOption={selectedOption}
-      labelMapper={key => selectorOptions.find(o => o.key === key).text}
-      onOptionChange={key => setSelectedOption(key)}
-    />
+    <div>
+      <SingleSelector
+        options={selectorOptions.map(o => o.key)}
+        selectedOption={selectedOption}
+        labelMapper={key => selectorOptions.find(o => o.key === key).text}
+        onOptionChange={key => setSelectedOption(key)}
+      />
+      <input readOnly value={selectedOption ? selectedOption : 'null'}></input>
+    </div>
   )
 }
 
@@ -34,14 +37,17 @@ const SingleSelectorIconStory = () => {
   ]
   const [selectedOption, setSelectedOption] = useState('4')
   return (
-    <SingleSelector
-      options={selectorOptions.map(o => o.key)}
-      selectedOption={selectedOption}
-      labelMapper={key => selectorOptions.find(o => o.key === key).text}
-      onOptionChange={key => setSelectedOption(key)}
-    >
-      <Icon light>#</Icon>
-    </SingleSelector>
+    <div>
+      <SingleSelector
+        options={selectorOptions.map(o => o.key)}
+        selectedOption={selectedOption}
+        labelMapper={key => selectorOptions.find(o => o.key === key).text}
+        onOptionChange={key => key && setSelectedOption(key)}
+      >
+        <Icon light>#</Icon>
+      </SingleSelector>
+      <input readOnly value={selectedOption ? selectedOption : 'null'}></input>
+    </div>
   )
 }
 
@@ -90,13 +96,15 @@ storiesOf('Button Group', module).add(
   'Single Selector',
   () => (
     <div>
-      <h1>Selector (Single)</h1>
+      <h1>Single Selector (nullable by default)</h1>
       <SingleSelectorStory />
-      <h1>Selector with Icon (Single)</h1>
+      <h1>
+        Single Selector (with Icon) (unnullable example; must have a selection)
+      </h1>
       <SingleSelectorIconStory />
-      <h1>Numerical Selector (Single)</h1>
+      <h1>Numerical Single Selector (Single)</h1>
       <NumericalSingleSelectorStory />
-      <h1>Selector (Single) with Hover</h1>
+      <h1>Single Selector with Hover</h1>
       <HoverSingleSelectorStory />
     </div>
   ),
