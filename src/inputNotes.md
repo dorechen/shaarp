@@ -1,5 +1,13 @@
 # Input Usage
 
+## Attributes
+Attributes of Input
+
+Attribute Name | Type | Desc
+--- | --- | ---
+big | boolean | bigger input component, height and text size increases
+dark | boolean | dark style input
+
 ## Typical Input Use
 
 ```javascript
@@ -16,5 +24,4 @@ import { Input } from '@woorkio/shaarp'
 ```
 
 ## Note
-- Use prop `big` in `Input` to use as "Big Input"
 - Mobile View: `Input` style will change with screen width <= 600px

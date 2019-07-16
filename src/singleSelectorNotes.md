@@ -3,7 +3,7 @@
 ## Attributes
 Functional Attributes (compulsory)
 
-Attributes | type | desc
+Attribute Name | Type | Desc
 --- | --- | ---
 options | array or strings | option labels to display
 selectedOption | string | current option that is selected
@@ -13,9 +13,9 @@ labelMapper | function | maps labels to keys if using a
 
 Styling Attributes
 
-prop name | type | desc
+Attribute Name | Type | Desc
 --- | --- | ---
-numerical | boolean | 
+numerical | boolean | forces button to be 48px wide
 
 
 ## Usage Example
@@ -72,4 +72,4 @@ const SingleSelectorStory = () => {
 </details>
 
 ## Note
-- .
+- Currently, styling does not change with mobile view

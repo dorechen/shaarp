@@ -2,6 +2,8 @@ import { jsx } from '@emotion/core'
 
 import { storiesOf } from '@storybook/react'
 
+import headerNotes from './headerNotes.md'
+
 import { H1, H2 } from './Header'
 
 storiesOf('Header', module).add(
@@ -12,7 +14,5 @@ storiesOf('Header', module).add(
       <H2>H2 Header</H2>
     </div>
   ),
-  {
-    notes: 'work in progress',
-  }
+  { notes: { markdown: headerNotes } }
 )

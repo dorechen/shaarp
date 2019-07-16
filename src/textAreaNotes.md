@@ -9,3 +9,6 @@ import { TextArea } from '@woorkio/shaarp'
   defaultValue="Big Input with a value"
 />
 ```
+
+## Note
+- Mobile View: `TextArea` style will change with screen width <= 600px

@@ -2,6 +2,7 @@ import { jsx } from '@emotion/core'
 import { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
+import inputHoverNotes from './inputHoverNotes.md'
 import singleSelectorNotes from './singleSelectorNotes.md'
 
 import { Icon } from './Icon'
@@ -17,13 +18,16 @@ const SingleSelectorStory = () => {
   const [selectedOption, setSelectedOption] = useState('2')
   return (
     <div>
+      <h5>
+        Selected Option (nullable by default):
+        {selectedOption ? selectedOption : 'null'}
+      </h5>
       <SingleSelector
         options={selectorOptions.map(o => o.key)}
         selectedOption={selectedOption}
         labelMapper={key => selectorOptions.find(o => o.key === key).text}
         onOptionChange={key => setSelectedOption(key)}
       />
-      <input readOnly value={selectedOption ? selectedOption : 'null'}></input>
     </div>
   )
 }
@@ -38,6 +42,10 @@ const SingleSelectorIconStory = () => {
   const [selectedOption, setSelectedOption] = useState('4')
   return (
     <div>
+      <h5>
+        Selected Option (unnullable example; must have a selection):
+        {selectedOption ? selectedOption : 'null'}
+      </h5>
       <SingleSelector
         options={selectorOptions.map(o => o.key)}
         selectedOption={selectedOption}
@@ -46,7 +54,6 @@ const SingleSelectorIconStory = () => {
       >
         <Icon light>#</Icon>
       </SingleSelector>
-      <input readOnly value={selectedOption ? selectedOption : 'null'}></input>
     </div>
   )
 }
@@ -92,21 +99,30 @@ const HoverSingleSelectorStory = () => {
   )
 }
 
-storiesOf('Button Group', module).add(
-  'Single Selector',
-  () => (
-    <div>
-      <h1>Single Selector (nullable by default)</h1>
-      <SingleSelectorStory />
-      <h1>
-        Single Selector (with Icon) (unnullable example; must have a selection)
-      </h1>
-      <SingleSelectorIconStory />
-      <h1>Numerical Single Selector (Single)</h1>
-      <NumericalSingleSelectorStory />
-      <h1>Single Selector with Hover</h1>
-      <HoverSingleSelectorStory />
-    </div>
-  ),
-  { notes: { markdown: singleSelectorNotes } }
-)
+storiesOf('Button Group', module)
+  .add(
+    'Input Hover',
+    () => (
+      <div>
+        <h1>Single Selector with Hover</h1>
+        <HoverSingleSelectorStory />
+      </div>
+    ),
+    { notes: { markdown: inputHoverNotes } }
+  )
+  .add(
+    'Single Selector',
+    () => (
+      <div>
+        <h1>Single Selector</h1>
+        <SingleSelectorStory />
+        <h1>Single Selector (with Icon)</h1>
+        <SingleSelectorIconStory />
+        <h1>Numerical Single Selector (Single)</h1>
+        <NumericalSingleSelectorStory />
+        <h1>Single Selector with Hover</h1>
+        <HoverSingleSelectorStory />
+      </div>
+    ),
+    { notes: { markdown: singleSelectorNotes } }
+  )

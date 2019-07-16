@@ -32,14 +32,17 @@ storiesOf('Button', module)
       <div>
         <h1>Default Button</h1>
         <Button onClick={action('clicked')}> Default </Button>
+        <Button fullWidth onClick={action('clicked')}>
+          Default style Full Width
+        </Button>
         <h1>Inverted Button</h1>
         <Button inverted onClick={action('clicked')}>
           Inverted
         </Button>
         <h1>Selector Button</h1>
         <SelectorButtonStory />
-        <Button selected fullWidth onClick={action('clicked')}>
-          Selected Style Full Width
+        <Button selected onClick={action('clicked')}>
+          Selected
         </Button>
         <h1>Icon Button</h1>
         <IconButton>I</IconButton>

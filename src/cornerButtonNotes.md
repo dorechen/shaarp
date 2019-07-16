@@ -1,5 +1,18 @@
 # Corner Button Usage
 
+## Attributes
+Attributes of CornerButton
+
+Attribute Name | Type | Desc
+--- | --- | ---
+fullWidth | boolean | (mobile view only) stretches width of the corner button to 100% of container
+
+Attributes of CornerActionArea
+
+Attribute Name | Type | Desc
+--- | --- | ---
+topRight | boolean | places children at the top right corner of its container (default is bottom right corner) 
+
 ## Typical use
 
 ```javascript
