@@ -16,6 +16,14 @@ const basicButton = css`
   &:hover {
     background-color: #333333;
   }
+
+  &:active {
+    padding: 0px;
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
 `
 
 const invertedButton = css`

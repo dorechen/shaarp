@@ -14,6 +14,14 @@ const base = css`
   cursor: pointer;
   transition: linear 300ms;
   transition-property: color, background-color;
+
+  &:active {
+    padding: 0px;
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
 `
 
 const lightIcon = css`

@@ -25,6 +25,14 @@ const baseButton = css`
     cursor: default;
   }
 
+  &:active {
+    padding: 0px;
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
   @media print {
     display: none;
   }
