@@ -9,12 +9,18 @@ const baseSelector = css`
 `
 
 const baseSelections = css`
+  min-width: unset;
   width: 100%;
   padding: 0px;
   margin-left: 2px;
 
   &:first-of-type {
     margin-left: 0px;
+  }
+
+  @media screen and (max-width: 600px) {
+    min-width: unset;
+    font-size: 14px;
   }
 `
 
