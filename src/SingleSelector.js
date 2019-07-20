@@ -29,11 +29,6 @@ const numericalSelection = css`
   max-width: 48px;
 `
 
-const selected = css`
-  background-color: #6e61cc;
-  color: #fafafa;
-`
-
 export const SingleSelector = ({
   numerical,
   options,
@@ -47,12 +42,9 @@ export const SingleSelector = ({
     return (
       <Button
         selector
+        selected={selectedOption === item}
         key={item}
-        css={[
-          baseSelections,
-          numerical ? numericalSelection : null,
-          selectedOption === item && selected,
-        ]}
+        css={[baseSelections, numerical ? numericalSelection : null]}
         onClick={() => {
           onOptionChange(selectedOption === item ? null : item)
         }}
