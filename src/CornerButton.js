@@ -40,7 +40,10 @@ const baseButton = css`
 
 const mobileButton = css`
   @media screen and (max-width: 600px) {
-    min-width: 48px;
+    display: block;
+    min-width: 0px;
+    width: 48px;
+    padding: 0px;
   }
 `
 
