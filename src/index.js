@@ -1,7 +1,7 @@
 export { Button } from './Button'
 export { CornerButton } from './CornerButton'
 export { CornerActionArea } from './CornerActionArea'
-export { H1, H2 } from './Header'
+export { H1, H2, H4 } from './Header'
 export { IconButton } from './IconButton'
 export { Input } from './Input'
 export { InputHover } from './InputHover'
