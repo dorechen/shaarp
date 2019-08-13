@@ -38,6 +38,17 @@ const baseButton = css`
   }
 `
 
+const invertedButton = css`
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  color: #000000;
+
+  &:hover,
+  &:focus {
+    background-color: #f2f2f2;
+  }
+`
+
 const mobileButton = css`
   @media screen and (max-width: 600px) {
     display: block;
@@ -56,13 +67,18 @@ const fullWidthMobile = css`
   }
 `
 
-export const CornerButton = ({ fullWidth, ...props }) => (
+export const CornerButton = ({ inverted, fullWidth, ...props }) => (
   <button
-    css={[baseButton, fullWidth ? fullWidthMobile : mobileButton]}
+    css={[
+      baseButton,
+      inverted && invertedButton,
+      fullWidth ? fullWidthMobile : mobileButton,
+    ]}
     {...props}
   />
 )
 
 CornerButton.propTypes = {
+  inverted: T.bool,
   fullWidth: T.bool,
 }

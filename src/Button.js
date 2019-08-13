@@ -27,13 +27,13 @@ const basicButton = css`
 `
 
 const invertedButton = css`
-  background-color: #414141;
-  border: 2px solid #ffffff;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  color: #000000;
 
   &:hover,
   &:focus {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #f2f2f2;
   }
 `
 

@@ -56,7 +56,9 @@ storiesOf('Button', module)
       <div>
         <h1>Corner Button</h1>
         <CornerActionArea>
-          <CornerButton onClick={action('clicked 1')}> 1 </CornerButton>
+          <CornerButton inverted onClick={action('clicked 1')}>
+            1
+          </CornerButton>
           <CornerButton onClick={action('clicked 2')}> 2 </CornerButton>
         </CornerActionArea>
       </div>
