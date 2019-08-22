@@ -41,6 +41,7 @@ export const SingleSelector = ({
     const label = labelMapper(item)
     return (
       <Button
+        id={item}
         selector
         selected={selectedOption === item}
         key={item}
