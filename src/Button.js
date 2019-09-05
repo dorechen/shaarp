@@ -21,6 +21,11 @@ const basicButton = css`
     padding: 0px;
   }
 
+  &:disabled {
+    background: #ddd;
+    cursor: default;
+  }
+
   &::-moz-focus-inner {
     border: 0;
   }
